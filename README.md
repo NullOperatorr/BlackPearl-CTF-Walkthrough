@@ -13,6 +13,8 @@ Difficulty: Medium
 Goal: Obtain Root Access  
 
 **Enviroment:**
-Kali Machine (Attacker).
-Dev (.ovf) VM.
-Make sure both VMs on the same virtual network (NAT).
+Kali Machine (Attacker).  
+Dev (.ovf) VM.  
+Make sure both VMs on the same virtual network (NAT).  
+
+---
