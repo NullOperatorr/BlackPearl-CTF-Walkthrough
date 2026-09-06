@@ -96,3 +96,11 @@ ffuf -u http://192.168.38.128:80/FUZZ -w /usr/share/wordlists/dirbuster/director
   <img width="794" height="635" alt="image" src="https://github.com/user-attachments/assets/13d1fe97-8e5b-4cee-8c1f-9497c77a43dc" />
 
 
+ ```bash
+  http://blackpearl.tcm
+  ```
+
+<img width="1229" height="932" alt="image" src="https://github.com/user-attachments/assets/9c0fd118-79a6-420f-aa96-4101ec82f6ee" />
+
+
+  
