@@ -90,6 +90,7 @@ ffuf -u http://192.168.38.128:80/FUZZ -w /usr/share/wordlists/dirbuster/director
   ```bash
   sudo mousepad /etc/hosts
   192.168.38.128     blackperl.tcm
+  ping blackperl.tcm (To Confirm)
   ```
 
   <img width="794" height="635" alt="image" src="https://github.com/user-attachments/assets/13d1fe97-8e5b-4cee-8c1f-9497c77a43dc" />
