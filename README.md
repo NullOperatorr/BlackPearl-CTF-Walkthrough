@@ -24,7 +24,7 @@ BlackPearl is a Linux-based machine that demonstrates how DNS misconfigurations,
 
 **- Host Discovery:**
 
-We can discover **BlackPerl** via Ping Sweep (nmap) or Arp scan (netdiscover) and the discovered target has IP-Address (192.168.38.128).  
+We can discover **BlackPearl** via Ping Sweep (nmap) or Arp scan (netdiscover) and the discovered target has IP-Address (192.168.38.128).  
 
 ```bash
 netdiscover -r 192.168.38.0/24  
@@ -89,8 +89,8 @@ ffuf -u http://192.168.38.128:80/FUZZ -w /usr/share/wordlists/dirbuster/director
 
   ```bash
   sudo mousepad /etc/hosts
-  192.168.38.128     blackperl.tcm
-  ping blackperl.tcm (To Confirm)
+  192.168.38.128     blackpearl.tcm
+  ping blackpearl.tcm (To Confirm)
   ```
 
   <img width="794" height="635" alt="image" src="https://github.com/user-attachments/assets/13d1fe97-8e5b-4cee-8c1f-9497c77a43dc" />
