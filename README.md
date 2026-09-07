@@ -174,9 +174,35 @@ curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
 
 ----
 
+
+## Visual Summary
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2d829d23-f8ae-4f55-b2d6-5f856dda7e2a" />  
+
+
+
+---
+
+## Vulnerability Assessment
+
+| Finding | Severity | Impact | Remediation |
+|---|---|---|---|
+| DNS Information Disclosure | Low | Reveals internal DNS information and assists reconnaissance. | Restrict DNS zone information and review DNS configuration. |
+| Outdated Navigate CMS v2.8 | High | Allows remote code execution and initial system access. | Upgrade Navigate CMS to a supported version or remove the exposed service. |
+| SUID PHP Binary | Critical | Allows a low-privileged user to execute commands with root privileges. | Remove the SUID bit from PHP and avoid assigning elevated privileges to interpreters. |
+
+
+
+
+
+---
+
 ## Lessons Learned
 
-
+- Proper DNS configuration can prevent unnecessary information disclosure.
+- Exposed and outdated web applications can provide an initial access.
+- SUID permissions should be carefully reviewed and limited.
+- Small security weaknesses can become critical when chained together.
 
 
 ---
