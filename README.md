@@ -158,7 +158,7 @@ curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
 
 - After Scrolling to **Files with interesting permissions** we found SUID (Set User ID) which is a special Linux permission that allows a program to run with the permissions of the file's owner, rather than the user who runs it.  
 - In our case, `www-data` can run `/usr/bin/php7.3` with root privileges.  
--We can check **GTFOBins** for a privilege-escalation method. **GTFOBins** is a collection of techniques showing how common Linux programs can be abused for privilege escalation.  
+- We can check **GTFOBins** for a privilege-escalation method. **GTFOBins** is a collection of techniques showing how common Linux programs can be abused for privilege escalation.  
 
  (https://gtfobins.gm7.org/gtfobins/php/#suid)  
 
