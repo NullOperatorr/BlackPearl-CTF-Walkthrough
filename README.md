@@ -11,7 +11,7 @@ BlackPearl is a Linux-based machine that demonstrates how DNS misconfigurations,
 - Difficulty:	Medium
 - Goal:	Obtain Root Access
 
-**Enviroment:**
+**Environment:**
 
 - Kali Machine (Attacker).
 - Dev (.ovf) VM.
